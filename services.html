@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务 - 仓母科技</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .services-hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('../img/services-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .services-hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .services-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .service-detail {
+            padding: 100px 0;
+        }
+        
+        .service-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .service-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .service-item:nth-child(even) .service-image {
+            order: 2;
+        }
+        
+        .service-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-info h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .service-info p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .service-features {
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .feature-item i {
+            color: #3498db;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .process-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .process-step {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .process-step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .testimonials {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.5rem;
+            color: rgba(52, 152, 219, 0.2);
+        }
+        
+        .testimonial-content {
+            margin-bottom: 20px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            .service-item {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .service-item:nth-child(even) .service-image {
+                order: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>仓母科技</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="services.html" class="active">服务</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services-hero">
+        <div class="container">
+            <h2>我们的服务</h2>
+            <p>仓母科技提供全方位的移动应用开发解决方案，从创意构思到应用上线，我们全程为您保驾护航</p>
+        </div>
+    </section>
+
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-item">
+                <div class="service-info">
+                    <h3>iOS应用开发</h3>
+                    <p>仓母科技拥有专业的iOS开发团队，熟悉Swift和Objective-C编程语言，能够为您打造高品质、高性能的iOS应用。无论是商业应用、社交应用还是游戏应用，我们都能满足您的需求。</p>
+                    <p>我们的iOS应用开发服务遵循Apple的设计规范，确保应用在各种iOS设备上都能提供出色的用户体验。</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>原生iOS应用开发</h4>
+                                <p>使用Swift或Objective-C开发高性能的原生iOS应用</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>iOS应用UI/UX设计</h4>
+                                <p>符合Apple设计规范的直观用户界面设计</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>iOS应用测试与优化</h4>
+                                <p>全面的测试和性能优化，确保应用稳定运行</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image">
+                    <img src="img/ios-development.jpg" alt="iOS应用开发">
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <h3>Android应用开发</h3>
+                    <p>我们的Android开发团队精通Java和Kotlin编程语言，能够为各种Android设备开发功能丰富、性能卓越的应用。我们关注Android平台的特性和最佳实践，确保应用在不同设备上都能提供一致的用户体验。</p>
+                    <p>从简单的工具应用到复杂的企业级应用，我们都有丰富的开发经验。</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>原生Android应用开发</h4>
+                                <p>使用Java或Kotlin开发高性能的原生Android应用</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Material Design实现</h4>
+                                <p>遵循Google的Material Design设计规范，打造现代化的用户界面</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Android应用兼容性测试</h4>
+                                <p>在各种Android设备和系统版本上进行兼容性测试</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image">
+                    <img src="img/android-development.jpg" alt="Android应用开发">
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <h3>跨平台应用开发</h3>
+                    <p>为了帮助客户节省时间和成本，我们提供跨平台应用开发服务。使用Flutter、React Native等先进技术，我们可以一次开发，同时部署到iOS和Android平台，大大缩短开发周期和降低开发成本。</p>
+                    <p>我们的跨平台应用保持了原生应用的性能和用户体验，同时提供了更高的开发效率。</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Flutter应用开发</h4>
+                                <p>使用Google的Flutter框架开发高性能的跨平台应用</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>React Native应用开发</h4>
+                                <p>使用Facebook的React Native框架开发接近原生体验的跨平台应用</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>一次开发，多平台部署</h4>
+                                <p>节省时间和成本，同时覆盖iOS和Android平台</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image">
+                    <img src="img/cross-platform.jpg" alt="跨平台应用开发">
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <h3>应用维护与更新</h3>
+                    <p>应用发布只是开始，我们提供长期的应用维护和更新服务，确保您的应用始终保持最佳状态。我们会定期检查应用性能，修复bug，并根据用户反馈和市场变化进行功能更新。</p>
+                    <p>我们的维护服务包括技术支持、性能优化、安全更新和功能升级，让您的应用始终保持竞争力。</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>应用性能监控</h4>
+                                <p>实时监控应用性能，及时发现并解决问题</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>定期安全更新</h4>
+                                <p>保持应用安全，防止潜在的安全威胁</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>功能升级与优化</h4>
+                                <p>根据用户反馈和市场需求，不断优化和升级应用功能</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image">
+                    <img src="img/app-maintenance.jpg" alt="应用维护与更新">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">我们的开发流程</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>需求分析</h3>
+                    <p>深入了解客户需求，明确项目目标、功能和技术要求</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>设计规划</h3>
+                    <p>创建UI/UX设计和技术架构，确定开发路线</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>开发实现</h3>
+                    <p>按照计划进行编码开发，定期进行内部测试和审核</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>测试优化</h3>
+                    <p>全面测试应用功能、性能和兼容性，进行必要的优化</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>发布上线</h3>
+                    <p>将应用发布到应用商店，并提供上线支持</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h3>维护更新</h3>
+                    <p>提供长期的技术支持和应用更新服务</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">客户评价</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>仓母科技为我们开发的电商应用非常出色，不仅界面美观，而且功能完善，用户体验极佳。他们的团队专业负责，能够及时响应我们的需求变更，是值得信赖的合作伙伴。</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="img/client-1.jpg" alt="客户头像">
+                        </div>
+                        <div class="author-info">
+                            <h4>陈总</h4>
+                            <p>某电商公司CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>我们与仓母科技合作开发了一款教育类应用，从需求分析到最终上线，他们都表现出了高度的专业性和创造力。应用上线后，用户反馈非常积极，大大提升了我们的品牌形象。</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="img/client-2.jpg" alt="客户头像">
+                        </div>
+                        <div class="author-info">
+                            <h4>林经理</h4>
+                            <p>某教育机构产品总监</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>仓母科技的跨平台开发服务帮我们节省了大量时间和成本。他们开发的应用在iOS和Android平台上都表现出色，用户体验一致，性能稳定。他们的技术支持也非常及时，是理想的技术合作伙伴。</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="img/client-3.jpg" alt="客户头像">
+                        </div>
+                        <div class="author-info">
+                            <h4>张总监</h4>
+                            <p>某科技创业公司创始人</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>准备好开始您的项目了吗？</h2>
+            <p>联系我们，获取专业的应用开发解决方案</p>
+            <a href="contact.html" class="btn">免费咨询</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>仓母科技</h3>
+                    <p>创新科技，卓越体验</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="services.html">服务</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-envelope"></i> info@cangmu.cc</p>
+                    <p><i class="fas fa-phone"></i> +86 123 4567 8910</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 中国</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 仓母科技. 保留所有权利.</p>
+                <p>网站: <a href="http://www.cangmu.cc">www.cangmu.cc</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

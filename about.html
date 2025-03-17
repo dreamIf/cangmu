@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 仓母科技</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .about-section {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .mission-vision {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .mission-vision-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .mission, .vision {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .mission h3, .vision h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .team-section {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-image {
+            height: 250px;
+            background-color: #ddd;
+            position: relative;
+        }
+        
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-info {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .team-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .team-info p {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .team-social a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #3498db;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .team-social a:hover {
+            background-color: #2c3e50;
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .about-content,
+            .mission-vision-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>仓母科技</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html" class="active">关于我们</a></li>
+                    <li><a href="services.html">服务</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>关于仓母科技</h2>
+                    <p>仓母科技成立于2020年，是一家专注于移动应用开发的创新型科技公司。我们致力于为客户提供高质量、高性能的移动应用解决方案，帮助企业和个人实现数字化转型。</p>
+                    <p>凭借我们专业的技术团队和丰富的行业经验，我们已成功为众多客户开发了各类iOS和Android应用，涵盖电商、社交、教育、健康等多个领域。</p>
+                    <p>在仓母科技，我们相信技术的力量可以改变世界。我们不断探索新技术，追求卓越，为客户创造真正有价值的数字产品。</p>
+                </div>
+                <div class="about-image">
+                    <img src="img/about-company.jpg" alt="仓母科技办公环境">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-vision-content">
+                <div class="mission">
+                    <h3>我们的使命</h3>
+                    <p>通过创新的移动应用解决方案，帮助企业和个人实现数字化转型，提升用户体验和业务效率。</p>
+                    <p>我们致力于将复杂的技术需求转化为简单易用的应用产品，让技术真正服务于人。</p>
+                </div>
+                <div class="vision">
+                    <h3>我们的愿景</h3>
+                    <p>成为移动应用开发领域的领导者，引领行业创新，为全球用户提供卓越的数字体验。</p>
+                    <p>我们期望通过我们的技术和产品，连接人与服务，创造更美好的数字生活。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">我们的团队</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="img/team-1.jpg" alt="张总经理">
+                    </div>
+                    <div class="team-info">
+                        <h3>张明</h3>
+                        <p>创始人 & CEO</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-weixin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="img/team-2.jpg" alt="李技术总监">
+                    </div>
+                    <div class="team-info">
+                        <h3>李强</h3>
+                        <p>技术总监</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-weixin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="img/team-3.jpg" alt="王设计师">
+                    </div>
+                    <div class="team-info">
+                        <h3>王丽</h3>
+                        <p>UI/UX设计师</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-weixin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="img/team-4.jpg" alt="赵产品经理">
+                    </div>
+                    <div class="team-info">
+                        <h3>赵伟</h3>
+                        <p>产品经理</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-weixin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>仓母科技</h3>
+                    <p>创新科技，卓越体验</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="services.html">服务</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-envelope"></i> info@cangmu.cc</p>
+                    <p><i class="fas fa-phone"></i> +86 123 4567 8910</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 中国</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 仓母科技. 保留所有权利.</p>
+                <p>网站: <a href="http://www.cangmu.cc">www.cangmu.cc</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
