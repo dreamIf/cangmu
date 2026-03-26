@@ -1,0 +1,11 @@
+{
+    "applinks":{
+        "apps":[],
+        "details":[
+            {
+                "appID":"UHGF926958.com.lidaoSoftware.DreamIfWeather",
+                "paths":["/dreamIfWeather/*"]
+            }
+        ]
+    }
+}
